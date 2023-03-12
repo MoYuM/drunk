@@ -7,7 +7,6 @@ import { useSearchParams } from 'react-router-dom'
 import { compose } from '../../utils/compose'
 import { LazyLoad } from '../LazyLoad'
 import type { CodemirrorRef } from './Codemirror'
-import { ControlPanel } from './ControlPanel'
 import type { MilkdownRef } from './Milkdown'
 import { FeatureToggleProvider } from './Milkdown/FeatureToggleProvider'
 import { ProseStateProvider } from './Milkdown/ProseStateProvider'
@@ -68,28 +67,14 @@ export const Playground: FC = () => {
     codemirror.update(markdown)
   }, [])
 
-  const onCodemirrorChange = useCallback((getCode: () => string) => {
-    const { current } = milkdownRef
-    if (!current)
-      return
-    const value = getCode()
-    current.update(value)
-  }, [])
 
   return (loading || !content)
     ? <div>loading...</div>
     : (
-      <div className="m-0 mt-16 grid border-b border-gray-300 dark:border-gray-600 md:ml-20 md:mt-0 md:grid-cols-2">
-        <Provider>
-          <div className="h-[calc(50vh-2rem)] overflow-auto overscroll-none md:h-screen">
-            <LazyLoad>
-              <AsyncMilkdown ref={milkdownRef} content={content} onChange={onMilkdownChange} />
-            </LazyLoad>
-          </div>
-          <div className="h-[calc(50vh-2rem)] overflow-auto overscroll-none border-l border-gray-300 dark:border-gray-600 md:h-screen">
-            <ControlPanel codemirrorRef={codemirrorRef} content={content} onChange={onCodemirrorChange} lock={lockCodemirror} />
-          </div>
-        </Provider>
-      </div>
-      )
+      <Provider>
+        <LazyLoad>
+          <AsyncMilkdown ref={milkdownRef} content={content} onChange={onMilkdownChange} />
+        </LazyLoad>
+      </Provider>
+    )
 }
