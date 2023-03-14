@@ -6,7 +6,6 @@ import { compose } from '../utils/compose'
 import { DarkModeProvider } from './DarkModeProvider'
 import { ErrorProvider } from './ErrorProvider'
 import { HelmetProvider } from './HelmetProvider'
-import { SectionProvider } from './SectionProvider'
 import { SidePanelStateProvider } from './SidePanelStateProvider'
 
 export const AppProvider = compose(
@@ -17,7 +16,6 @@ export const AppProvider = compose(
   BrowserRouter,
 
   DarkModeProvider,
-  SectionProvider,
   SidePanelStateProvider,
 
   ToastProvider,
