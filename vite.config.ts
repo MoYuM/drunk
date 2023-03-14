@@ -4,8 +4,6 @@ import { join } from 'pathe'
 import { defineConfig, loadEnv } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-import { markdownPlugin } from './plugins/markdown-plugin'
-import { sitemapPlugin } from './plugins/sitemap-plugin'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
@@ -34,8 +32,6 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       VitePWA(),
-      sitemapPlugin(),
-      markdownPlugin(),
       react(),
     ],
   }

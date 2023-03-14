@@ -1,10 +1,8 @@
-/* Copyright 2021, Milkdown by Mirone. */
-import type { FC } from 'react'
-import { Router } from '../route/Router'
-import { Layout } from './Layout'
+import { FC } from 'react'
+import { Playground } from './Playground';
 
 export const App: FC = () => (
-  <Layout>
-    <Router />
-  </Layout>
+  <div className='dark:bg-nord0 w-full h-full min-h-screen bg-white text-gray-900 dark:text-gray-50 overflow-y-auto'>
+    <Playground />
+  </div>
 )
