@@ -1,7 +1,10 @@
 {
-  "name": "website",
-  "version": "7.1.0",
+  "name": "drunk",
+  "version": "0.0.1",
   "private": true,
+  "author": {
+    "name": "MoYuM"
+  },
   "scripts": {
     "tauri": "tauri",
     "dev": "vite",
