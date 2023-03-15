@@ -4,7 +4,7 @@
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
     "devPath": "http://localhost:5173",
-    "distDir": "../build"
+    "distDir": "../dist"
   },
   "package": {
     "productName": "drunk",
@@ -12,7 +12,22 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "fs": {
+        "all": false,
+        "copyFile": false,
+        "createDir": true,
+        "exists": true,
+        "readDir": false,
+        "readFile": true,
+        "removeDir": false,
+        "removeFile": false,
+        "renameFile": false,
+        "writeFile": true,
+        "scope": [
+          "$APPDATA/*/*"
+        ]
+      }
     },
     "bundle": {
       "active": true,
@@ -29,7 +44,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.drunk",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
