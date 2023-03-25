@@ -1,4 +1,3 @@
-/* Copyright 2021, Milkdown by Mirone. */
 import type { ReactNode } from 'react'
 import React from 'react'
 import type { FallbackProps } from 'react-error-boundary'

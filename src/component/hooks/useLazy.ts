@@ -1,4 +1,3 @@
-/* Copyright 2021, Milkdown by Mirone. */
 import { useEffect, useState } from 'react'
 
 export type Content = string | (() => Promise<{ default: string }>)

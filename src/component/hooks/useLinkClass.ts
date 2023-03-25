@@ -1,4 +1,3 @@
-/* Copyright 2021, Milkdown by Mirone. */
 import { clsx } from 'clsx'
 import { useCallback } from 'react'
 

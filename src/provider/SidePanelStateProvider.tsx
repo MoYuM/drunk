@@ -1,4 +1,3 @@
-/* Copyright 2021, Milkdown by Mirone. */
 import type { Dispatch, FC, ReactNode, Reducer } from 'react'
 import { createContext, useCallback, useContext, useReducer } from 'react'
 

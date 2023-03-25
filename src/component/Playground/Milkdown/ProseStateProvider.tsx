@@ -1,4 +1,3 @@
-/* Copyright 2021, Milkdown by Mirone. */
 import type { Dispatch, FC, ReactNode, SetStateAction } from 'react'
 import { createContext, useContext, useState } from 'react'
 

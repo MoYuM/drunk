@@ -1,7 +1,5 @@
-/* Copyright 2021, Milkdown by Mirone. */
 import { StrictMode } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { ToastProvider } from '../component/Toast'
 import { compose } from '../utils/compose'
 import { DarkModeProvider } from './DarkModeProvider'
 import { ErrorProvider } from './ErrorProvider'
@@ -17,6 +15,4 @@ export const AppProvider = compose(
 
   DarkModeProvider,
   SidePanelStateProvider,
-
-  ToastProvider,
 )
